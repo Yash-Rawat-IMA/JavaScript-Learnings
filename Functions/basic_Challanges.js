@@ -1,10 +1,12 @@
 // 1. Normal function calling with Arguments and Prameters
-function makeTea(typeOfTea) //Parameters
+function makeTea(typeOfTea = "tea") //Default Parameters and Parameters
 {
     return `Making ${typeOfTea}`
 }
 let teaOrder=makeTea("Green Tea");
+let defautTea=makeTea();
 console.log(teaOrder);  //Arguments
+console.log(defautTea);  //Without Arguments, using the default argument
 // 2. Function under Function
 function orderTea(teaType) {
     function confirmOrder() {
@@ -61,3 +63,49 @@ let name=creator();    //name is holding the function definition, so we can pass
 let lname=name("Rawat");
 console.log(name("Yash"));
 console.log(lname);
+
+// What if you don't know the number of parameters
+
+function Nums(...num)       //rest operator(also used as spread in some cases...)
+{
+    return num;
+}
+
+const res = Nums(500, 699, 789, 5456, 121, 981, 104);
+console.log(res);       //here returns the arguments as an array and then you can perform the algo to get the sum or whatever you want
+
+// you know at least two values would be there, but don't know after that how many
+// in that case follow this
+function  twoNums(val1, val2, ...nums)
+{
+    return nums;
+}
+const resTwo = twoNums(100, 200, 300, 400, 500);
+console.log(resTwo);        //initial two values don't get added in this array, rather after that all the values are added.
+
+
+// Passing object as Parameters in the function
+const user = {
+    userName : "Sam",
+    sports : "Basketball"
+}
+
+function callObject(anyObject)
+{
+    console.log(`Hi ${anyObject?.userName}! You play ${anyObject?.sports}! Well Done Keep it up`);
+}
+callObject(user);
+callObject({
+    userName: "Yash",
+    sports : "Basketball"
+});     //direct object passing
+
+
+function arraySecondVal(getArray)
+{
+    return getArray[1]
+}
+const newArray = [1,2,3,4,5];
+console.log(arraySecondVal(newArray));
+
+console.log(arraySecondVal([100,200,300,400,500]));
