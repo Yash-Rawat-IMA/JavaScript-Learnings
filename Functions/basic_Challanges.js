@@ -109,3 +109,10 @@ const newArray = [1,2,3,4,5];
 console.log(arraySecondVal(newArray));
 
 console.log(arraySecondVal([100,200,300,400,500]));
+
+
+// Another way of defining functions in a variable
+const addTwo = function(num){
+    return num+2;
+}
+console.log(addTwo(5));
