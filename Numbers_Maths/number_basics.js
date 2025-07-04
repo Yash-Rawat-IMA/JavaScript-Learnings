@@ -53,7 +53,7 @@ console.log(Math.abs(-55));     //55
 console.log(Math.round(4.3));   //4
 console.log(Math.round(4.6));   //5
 console.log(Math.ceil(4.2));    //5
-console.log(Math.floor(4.2));   //4
+console.log(Math.floor(4.2));   //4  
 console.log(Math.sqrt(16));   //4
 console.log(Math.sqrt(16.5));   //4.06201920231798
 console.log(Math.max(5, 9, 1, 7, 0.5));   //9
