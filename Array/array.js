@@ -30,12 +30,13 @@ console.log(arr.join(' | '));
 let s=arr.toString()
 console.log(s);
 // Splice to remove from index1 to index2  
+console.log(`SPLICE`)
 let a = [20, 30, 40, 50, 60];
 a.splice(1, 3);
 console.log(a);
 console.log(a[1]);
 // Splice to add from index1 and the elements
-a.splice(1, 0, 3, 4, 5);
+a.splice(1, 0, 3, 4, 5);  //@para1: parameter 1 : start index, @para2: delete count, number of elements to be deleted, @para3..... : elements to be added in place of deleted elements from index given at (@para1)
 console.log(a);
 a.splice(4, 0, 33, 44, 55);
 console.log(a);
@@ -43,11 +44,13 @@ a.splice(0,3);
 console.log(a);
 // Type of Array
 console.log(typeof a);
-// Softcopy
+console.log(`Softcopy: gets the changes to both the array: `)
 let array1=[10,20,30,40,50];
 let array2=array1;
+console.log(`Array2 as Softcopy of Array1`)
 console.log(array2);
 array1.pop();
+console.log(`Array2 after popping in array Array1`)
 console.log(array2);
 // Hardcopy: no changes
 // First way
