@@ -105,3 +105,8 @@ myCoding.forEach( (item) => {
     console.log(item.langName, ":- ", item.langFileName)
 })
 
+// for-each doesn't return anything
+const val = myCoding.forEach( (item) => {
+    return item;
+})
+console.log(val)  //undefined
