@@ -8,7 +8,7 @@ console.log(newNums)
 let returnNums = myNums.filter( (num) => {
     return num>4
 })
-
+// if you don't return here we get an empty array
 console.log(returnNums)
 
 // for for-each loop explicitly store the values in the array you want after putting the condition as it doesn't return the values on itself
